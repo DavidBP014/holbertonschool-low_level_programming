@@ -1,22 +1,17 @@
 #include "main.h"
 /**
- * print_line - entry point
+ * print_line - Print a line in terminal
  *
- * Description: Prints a line based on variable n
+ * @n: Input number of lines to print
  *
- * @n:variable
- *
- * Return :void
  */
 
 void print_line(int n)
 {
-	int i;
-
-	if (n > 0)
-	{
-		for (i = 0; i < n; i++)
-			_putchar('_');
-	}
-	_putchar('\n');
+while (n > 0)
+{
+_putchar('_');
+n--;
+}
+_putchar(10);
 }
