@@ -1,29 +1,35 @@
 #include "main.h"
 /**
- * print_triangle - entry point
+ * print_triangle - Print a inversed triangle in terminal
  *
- * Description: Prints a line based on a variable n
+ * @size: Input number of lines to print triangle
  *
- * @size: variable
- *
- * Return:void
  */
 
 void print_triangle(int size)
 {
-	int triangle, line;
-
-	if (size <= 0)
-		_putchar('\n');
-	for (triangle = 1; triangle <= size; triangle++)
-	{
-		for (line = size; line >= 1; line--)
-		{
-			if (line > triangle)
-				_putchar(' ');
-			else
-				_putchar('#');
-		}
-		_putchar('\n');
-	}
+int i;
+int j;
+if (size <= 0)
+{
+_putchar(10);
+}
+else
+{
+for (i = 1; i <= size; i++)
+{
+for (j = 1; j <= size ; j++)
+{
+if (j >= size - (i - 1))
+{
+_putchar('#');
+}
+else
+{
+_putchar(' ');
+}
+}
+_putchar(10);
+}
+}
 }
