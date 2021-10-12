@@ -1,35 +1,25 @@
-#include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+#include <stdio.h>
 /**
- *main-generates random passwords for the program 101-crackme.
- *Return:0 if there is no error
-*/
+ * main - crack
+ *
+ * Return: 0
+ */
 int main(void)
 {
-	int clave[100];
-	int suma = 0;
-	int variable1 = 0;
-	int variable2;
+	int rch, b = 0;
 
-	srand(time(NULL));
-
-	while (variable1 < 100)
+	srand(time(0));
+	while (b < 2772 - 127)
 	{
-		clave[variable1] = rand() % 50;
-
-		suma += (clave[variable1] + '0');
-
-		putchar(clave[variable1] + '0');
-
-		if ((3214 - suma) - '0' < 50)
+		rch = rand() % 127;
+		if (rch > 32)
 		{
-			variable2 = 3214 - suma - '0';
-			suma += variable2;
-			putchar(variable2 + '0');
-			break;
+			putchar(rch);
+			b = b + rch;
 		}
-		variable1++;
 	}
+	putchar(2772 - b);
 	return (0);
 }
