@@ -1,22 +1,21 @@
 #include "main.h"
+
 /**
- * print_chessboard-Imprime un tablero de ajedrez
- * @a:matriz de dos dimensiones.
-*/
+ * print_chessboard - prints the chessboard.
+ * @a: Chessboard to print
+ */
+
 void print_chessboard(char (*a)[8])
 {
-	int vertical = 0;
-	int horizontal = 0;
+	int i;
+	int j;
 
-	while (vertical < 8)
+	for (i = 0; i < 8; i++)
 	{
-		horizontal = 0;
-		while (horizontal < 8)
+		for (j = 0; j < 8; j++)
 		{
-			_putchar(a[vertical][horizontal]);
-			horizontal++;
+			_putchar(a[i][j]);
 		}
 		_putchar('\n');
-		vertical++;
 	}
 }
